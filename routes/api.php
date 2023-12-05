@@ -18,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('customer', CustomerController::class);
 Route::apiResource('hotel', HotelController::class);
+
+Route::get('/login', [App\Http\Controllers\CustomerController::class, 'login']);
+Route::post('/register', [\App\Http\Controllers\CustomerController::class, 'register']);
